@@ -1,6 +1,10 @@
 <div (swiperight)="goLeft()">
-    <div *ngFor="let act of actList" fxLayoutAlign="center center">
-        <img src="{{act.img}}" class="actImg">
-        <p>{{act.name}}</p>
+    <div *ngFor="let act of actList">
+        <mat-card class="matCard">
+            <img mat-card-image src="{{act.img}}">
+            <mat-card-content fxLayoutAlign="space-around">
+                <p>{{act.name}}</p>
+            </mat-card-content>
+        </mat-card>
     </div>
 </div>
