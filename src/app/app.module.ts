@@ -1,3 +1,4 @@
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -22,6 +23,7 @@ import { DbService } from './services/db.service';
   imports: [
     BrowserModule,
     MaterialModule,
+    FlexLayoutModule,
     AppRoutingModule,
     BrowserAnimationsModule
   ],

@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'Bintan';
   constructor(private router: Router){}
 
-  navigate(dest){
+  navigate(dest = "/"){
     this.router.navigate([dest]);
   }
 }
