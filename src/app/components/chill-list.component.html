@@ -1,3 +1,6 @@
 <div (swipeleft)="goRight()" (swiperight)="goLeft()">
-    chill ist
+    <div *ngFor="let chill of chillList">
+        <img src="{{chill.img}}">
+        <p>{{chill.name}}</p>
+    </div>
 </div>

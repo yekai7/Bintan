@@ -1,3 +1,4 @@
+import { DbService } from './../services/db.service';
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,10 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesListComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private dbSvc: DbService) { }
 
   ngOnInit() {
   }
+
+  actList = this.dbSvc.activities;
 
   goLeft(){
     this.router.navigate(['chill'])

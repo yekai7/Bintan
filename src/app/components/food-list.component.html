@@ -1,3 +1,6 @@
 <div (swipeleft)="goRight()">
-test
+    <div *ngFor="let food of foodList">
+        <img src="{{food.img}}">
+        <p>{{food.name}}</p>
+    </div>
 </div>

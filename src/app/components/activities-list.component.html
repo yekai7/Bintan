@@ -1,3 +1,6 @@
 <div (swiperight)="goLeft()">
-    activities list
+    <div *ngFor="let act of actList" fxLayoutAlign="center center">
+        <img src="{{act.img}}" class="actImg">
+        <p>{{act.name}}</p>
+    </div>
 </div>
