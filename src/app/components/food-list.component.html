@@ -1,6 +1,6 @@
-<div (swipeleft)="goRight()">
+<div (swipeleft)="goRight()" class="container">
     <div *ngFor="let food of foodList">
-        <mat-card class="matCard">
+        <mat-card>
             <img mat-card-image src="{{food.img}}" class="actImg">
             <mat-card-content fxLayoutAlign="space-around">
                 <p>{{food.name}}</p>
