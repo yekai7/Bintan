@@ -1,9 +1,12 @@
-<div (swiperight)="goLeft()" class="container">
-    <div *ngFor="let act of actList">
-        <mat-card>
-            <img mat-card-image src="{{act.img}}">
-            <mat-card-content fxLayoutAlign="space-around">
-                <p>{{act.name}}</p>
+<div (swiperight)="goLeft()" class="container" fxLayout="column">
+    <div *ngFor="let act of actList" class="test" fxLayoutAlign="space-around ">
+        <mat-card class="customCard">
+            <mat-card-content>
+                <img src="{{act.img}}">
+            </mat-card-content>
+            <mat-card-content>
+                <h2>{{act.name}}</h2>
+                <p>Where: {{act.location}}</p>
             </mat-card-content>
         </mat-card>
     </div>

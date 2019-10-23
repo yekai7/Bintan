@@ -7,12 +7,12 @@ import { MainComponent } from './components/main.component';
 
 
 const routes: Routes = [
-  {path: '', component: MainComponent},
-  {path: 'food', component: FoodListComponent},
-  {path: 'chill', component: ChillListComponent},
-  {path: 'activities', component: ActivitiesListComponent},
+  { path: 'main', component: MainComponent },
+  { path: 'food', component: FoodListComponent },
+  { path: 'chill', component: ChillListComponent },
+  { path: 'activities', component: ActivitiesListComponent },
   // {path: 'activities/:id', component: ActivityComponent},
-  {path: '**', redirectTo: '/', pathMatch: 'full'}
+  { path: '**', redirectTo: '/', pathMatch: 'full' }
 ];
 
 @NgModule({
