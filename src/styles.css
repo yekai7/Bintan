@@ -6,10 +6,10 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     background-image: url("./assets/bg.jpg");
     background-color:white;
-    background-repeat: no-repeat;
+    /* background-repeat: no-repeat; */
     /* background-size: cover; */
     background-position: 100% top;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
 }
 router-outlet ~ * {
     position: absolute;
