@@ -8,7 +8,7 @@ body {
     background-color:white;
     /* background-repeat: no-repeat; */
     /* background-size: cover; */
-    background-position: 100% top;
+    /* background-position: 100% top; */
     /* background-attachment: fixed; */
 }
 router-outlet ~ * {
