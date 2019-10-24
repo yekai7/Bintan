@@ -17,9 +17,9 @@ export class DbService {
   ];
 
   activities = [
-    { name: 'Foam Party!', cost: 0, location: 'In resort', img: './assets/vista_restaurant.jpg'},
-    { name: 'ATV through forest/beach', cost: 60, location: 'In resort', img: '../assets/atv.jpg'},
-    { name: 'Test', cost: 60, location: 'In resort', img: '../assets/atv.jpg'}
+    { name: 'Foam Party!', cost: 0, location: 'In resort', img: '../assets/vista_restaurant.jpg'},
+    { name: 'ATV through forest/beach', cost: 60, location: 'In resort', img: '../assets/angsana_spa.jpg'},
+    { name: 'Test', cost: 60, location: 'In resort', img: '../assets/bg.jpg'}
 
   ]
 }
