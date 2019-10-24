@@ -1,9 +1,12 @@
 <div (swipeleft)="goRight()" (swiperight)="goLeft()"  class="container">
-    <div *ngFor="let chill of chillList">
-        <mat-card>
-            <img mat-card-image src="{{chill.img}}">
-            <mat-card-content fxLayoutAlign="space-around">
-                <p>{{chill.name}}</p>
+    <div *ngFor="let chill of chillList" class="test" fxLayoutAlign="space-around ">
+        <mat-card class="customCard">
+            <mat-card-content>
+                <img src="{{chill.img}}" class="actImg">
+            </mat-card-content>
+            <mat-card-content>
+                <h2>{{chill.name}}</h2>
+                <p>Where: {{chill.location}}</p>
             </mat-card-content>
         </mat-card>
     </div>

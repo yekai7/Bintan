@@ -1,24 +1,9 @@
-<!-- 
-<mat-toolbar color="warn">
-  <mat-toolbar-row fxLayout="row column" fxLayoutAlign="space-around center">
-    <span>BINTAN LETS GO</span>
-  </mat-toolbar-row>
-
-  <mat-toolbar-row fxLayoutGap="3vw" fxLayoutAlign="space-around">
-    <span (click)="navigate('food')">FOOD</span>
-    <span (click)="navigate('chill')">CHILL</span>
-    <span (click)="navigate('activities')">ACTIVITIES</span> 
-  </mat-toolbar-row>
-</mat-toolbar>
-<router-outlet></router-outlet> -->
 <div class="menu" fxLayoutAlign="space-around center">
-  <mat-icon (click)="navigate()" fxLayoutAlign="start" color="warn">home</mat-icon>
+  <mat-icon (click)="navigate()" fxLayoutAlign="start" color="primary">home</mat-icon>
   <a routerLink="food" routerLinkActive="active">FOOD</a>
   <a routerLink="chill" routerLinkActive="active">CHILL</a>
   <a routerLink="activities" routerLinkActive="active">ACTIVITIES</a>
-  <!-- <span (click)="navigate('food')">FOOD</span> -->
-  <!-- <span (click)="navigate('chill')">CHILL</span>
-  <span (click)="navigate('activities')">ACTIVITIES</span> -->
+
 </div>
 <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
   <router-outlet #o="outlet"></router-outlet>
