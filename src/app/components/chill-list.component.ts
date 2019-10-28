@@ -15,12 +15,15 @@ export class ChillListComponent implements OnInit {
   ngOnInit() {
   }
 
-  goRight(){
-    this.router.navigate(['activities']);
-  }
+  // goRight(){
+  //   this.router.navigate(['activities']);
+  // }
 
-  goLeft(){
-    this.router.navigate(['food'])
+  // goLeft(){
+  //   this.router.navigate(['food'])
+  // }
+  goTo(id){
+    this.router.navigate(['activity', id])
   }
 
 }
