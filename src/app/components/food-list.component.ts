@@ -10,7 +10,7 @@ import { DbService } from '../services/db.service';
 export class FoodListComponent implements OnInit {
 
   constructor(private router: Router, private dbSvc:DbService) { }
-  foodList = this.dbSvc.food;
+  foodList = this.dbSvc.getActFromCategory('food');
 
   ngOnInit() {
   }

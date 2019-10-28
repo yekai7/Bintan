@@ -11,6 +11,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material.module';
 import { MainComponent } from './components/main.component';
 import { DbService } from './services/db.service';
+import { ActivityComponent } from './components/activity.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { DbService } from './services/db.service';
     ActivitiesListComponent,
     FoodListComponent,
     ChillListComponent,
-    MainComponent
+    MainComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,

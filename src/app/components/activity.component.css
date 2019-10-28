@@ -1,0 +1,11 @@
+.actImg {
+    object-fit: cover; 
+    width: 100vw;
+    height: auto;
+}
+
+.detailContainer {
+    background: white;
+    height:100vh;
+    font-family: Montserrat,sans-serif;
+}

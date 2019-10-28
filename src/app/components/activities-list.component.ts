@@ -14,10 +14,14 @@ export class ActivitiesListComponent implements OnInit {
   ngOnInit() {
   }
 
-  actList = this.dbSvc.activities;
+  actList = this.dbSvc.getActFromCategory('fun');
 
   goLeft(){
     this.router.navigate(['chill', {relativeTo: this.route }])
+  }
+
+  goTo(id){
+    this.router.navigate(['activity', id])
   }
 
 }
