@@ -11,7 +11,7 @@ export class ActivityComponent implements OnInit {
 
   constructor(private aRoute : ActivatedRoute, private dbSvc: DbService) { }
 
-  activity = {};
+  activity;
   ngOnInit() {
     this.activity = this.dbSvc.getActivity(this.aRoute.snapshot.params.id)
   }
