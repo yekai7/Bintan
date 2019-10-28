@@ -1,0 +1,23 @@
+{
+  "name": "bintan_app",
+  "version": "1.0.0",
+  "description": "for our trip!",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yekai7/Bintan.git"
+  },
+  "author": "yekai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yekai7/Bintan/issues"
+  },
+  "homepage": "https://github.com/yekai7/Bintan#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
