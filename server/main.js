@@ -3,7 +3,7 @@ const path = require('path');
 const env = require('dotenv').config();
 
 const app = express();
-const PORTNUMBER = process.env.PN;
+const PORTNUMBER = process.env.PORT || 3000;
 
 app.use(express.static(path.join(__dirname,'public/dist/Bintan')))
 
