@@ -7,6 +7,10 @@ const PORTNUMBER = process.env.PN;
 
 app.use(express.static(path.join(__dirname,'public/dist/Bintan')))
 
+app.use('*', (req,res)=>{
+    res.send('<h1>PAGE NOT FOUND!!</h1>');
+})
+
 app.listen(PORTNUMBER,()=>{
     console.log(`App listening on ${PORTNUMBER}`);
 })
