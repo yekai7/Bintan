@@ -7,8 +7,8 @@ export class DbService {
 
   constructor() { }
   chill = [
-    { name: 'Angsana Spa & Massage', cost: 73, location: 'In resort', img: '../assets/angsana_spa.jpg'},
-    { name: 'Chill by the beach', cost: 0, location: 'In resort', img: '../assets/vista_restaurant.jpg'}
+    { name: 'Angsana Spa & Massage', cost: 73, location: 'In resort', img: 'assets/angsana_spa.jpg'},
+    { name: 'Chill by the beach', cost: 0, location: 'In resort', img: 'assets/vista_restaurant.jpg'}
   ];
 
   food = [
