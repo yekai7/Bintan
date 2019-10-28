@@ -18,4 +18,7 @@ export class FoodListComponent implements OnInit {
     this.router.navigate(['chill']);
   }
 
+  goTo(id){
+    this.router.navigate(['activity', id])
+  }
 }

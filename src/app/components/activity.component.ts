@@ -13,7 +13,7 @@ export class ActivityComponent implements OnInit {
 
   activity;
   ngOnInit() {
-    this.activity = this.dbSvc.getActivity(this.aRoute.snapshot.params.id)
+    this.activity = this.dbSvc.getActivity(this.aRoute.snapshot.params.id);
   }
 
 }
