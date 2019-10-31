@@ -11,5 +11,8 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
   }
+  processSearch(value){
+    console.log(value)
+  }
 
 }

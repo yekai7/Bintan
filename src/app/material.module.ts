@@ -7,11 +7,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list';
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatInputModule} from '@angular/material/input'; 
 
 const MODULE = [
     MatCardModule, MatButtonModule, MatMenuModule,
     MatToolbarModule, MatIconModule, MatGridListModule,
-    MatListModule, MatTabsModule
+    MatListModule, MatTabsModule, MatInputModule
 ]
 
 @NgModule({

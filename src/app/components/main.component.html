@@ -1,1 +1,7 @@
-<p>main works!</p>
+<mat-toolbar fxLayoutAlign="center center" color="warn">
+    <mat-form-field>
+        <input matInput type="text" name="search" #search
+            (keyup)="processSearch($event?.target?.value)">
+    </mat-form-field>
+    <mat-icon>search</mat-icon>
+</mat-toolbar>

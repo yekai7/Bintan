@@ -1,10 +1,14 @@
-<div class="menu" fxLayoutAlign="space-around center">
+<!-- <div class="menu" fxLayoutAlign="space-around center">
+
+
+</div> -->
+
+<mat-toolbar color="warn">
   <mat-icon (click)="navigate()" fxLayoutAlign="start" color="primary">home</mat-icon>
   <a routerLink="food" routerLinkActive="active">FOOD</a>
   <a routerLink="chill" routerLinkActive="active">CHILL</a>
   <a routerLink="activities" routerLinkActive="active">ACTIVITIES</a>
-
-</div>
+</mat-toolbar>
 <main [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
   <router-outlet #o="outlet"></router-outlet>
 </main>
