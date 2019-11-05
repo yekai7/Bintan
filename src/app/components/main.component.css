@@ -1,0 +1,25 @@
+.menuItem{
+    color: white;
+    text-decoration: none;
+    padding: 20px 20px;
+    font-size:16px;
+}
+
+.menuItem:hover, .menuItem:active{
+    background: white;
+    color: #333;
+    border-radius: 2px;
+}
+
+.actImg {
+    object-fit: cover; 
+    width: 90vw;
+    height: auto;
+}
+
+.customCard {
+    padding:5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+    /* background-color:pink; */
+    font-family: Montserrat,sans-serif;
+}

@@ -7,13 +7,13 @@ export class DbService {
 
   constructor() { }
   activitiesList = [
-    { id: 1, name: 'Angsana Spa & Massage', cost: 80, location: 'In resort', img: 'assets/angsana_spa.jpg', category:"chill"},
-    { id: 2, name: 'Chill by the beach', cost: 0, location: 'In resort', img: 'assets/vista_restaurant.jpg', category:"chill"},
-    { id: 3, name: 'Foam Party!', cost: 0, location: 'In resort', img: 'assets/vista_restaurant.jpg', category:"chill"},
-    { id: 4, name: 'Massages', cost: 0, location: 'In resort', img: 'assets/vista_restaurant.jpg', category:"chill"},
+    { id: 1, name: 'Angsana Spa & Massage', cost: 80, location: 'In resort', url:'https://www.angsanaspa.com/', img: 'assets/angsana_spa.jpg', category:"chill"},
+    { id: 2, name: 'Chill by the beach', cost: 0, location: 'In resort', img: 'assets/beach.jpg', category:"chill"},
+    { id: 3, name: 'Foam Party!', cost: 0, location: 'In resort', img: 'assets/formparty.jpg', category:"chill"},
+    { id: 4, name: 'Massages', cost: 0, location: 'In resort', img: 'assets/massage.jpg', category:"chill"},
     { id: 5, name: 'Vista Restaurant', cost: 30, location: 'In resort', img: 'assets/vista_restaurant.jpg', category:"food"},
-    { id: 6, name: 'Buffet @ XANA Beach Club', cost: 60, location: 'In resort', img: 'assets/vista_restaurant.jpg', category:"food"},
-    { id: 7, name: 'Mookata', cost: 60, location: 'In resort', img: 'assets/vista_restaurant.jpg', category:"food"},
+    { id: 6, name: 'Buffet @ XANA Beach Club', cost: 60, location: 'In resort', img: 'assets/xanabuffet.jpg', category:"food"},
+    { id: 7, name: 'Mookata', cost: 60, location: 'In resort', img: 'assets/mookata.jpg', category:"food"},
     { id: 8, name: 'Street Food', cost: 0, location: 'Rimba Jaya', img: 'assets/vista_restaurant.jpg', category:"food"},
     { id: 9, name: 'Foam Party!', cost: 0, location: 'In resort', img: 'assets/vista_restaurant.jpg', category:"chill"},
     { id: 10, name: 'ATV through forest/beach', cost: 45, location: 'In resort', img: 'assets/angsana_spa.jpg', category:"fun"},

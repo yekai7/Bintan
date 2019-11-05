@@ -1,6 +1,37 @@
 <div class="detailContainer">
     <img src={{activity.img}} class="actImg">
-    <h1>{{activity.name}}</h1>
-    <p>Price:{{activity.cost}}</p>
-    <p>Price:{{activity.location}}</p>
+    <table class="data">
+        <tr>
+            <td>
+                <h3>Name</h3>
+            </td>
+            <td>
+                <p>{{activity.name}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Cost</h3>
+            </td>
+            <td>
+                <p>${{activity.cost}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Location</h3>
+            </td>
+            <td>
+                <p>{{activity.location}}</p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <a href="{{activity.url}}">More details</a>
+            </td>
+        </tr>
+    </table>
+
 </div>
