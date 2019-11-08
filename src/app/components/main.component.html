@@ -17,12 +17,13 @@
     </mat-card>
 </div> -->
 
-
-<mat-grid-list cols="3" rowHeight="20vh">
-    <mat-grid-tile *ngFor="let tile of tiles;let i = index" [colspan]="tile.cols" [rowspan]="tile.rows">
-        <div (click)="navigateTo(tile.id)" class="imgContainer">
-            <img [src]="tile.img" alt="{{tile.name}}" layout-fill>
-            <mat-grid-tile-footer>{{tile.name}}</mat-grid-tile-footer>
-        </div>
-    </mat-grid-tile>
-</mat-grid-list>
+<div class="mainContainer">
+    <mat-grid-list cols="3" rowHeight="20vh">
+        <mat-grid-tile *ngFor="let tile of tiles;let i = index" [colspan]="tile.cols" [rowspan]="tile.rows">
+            <div (click)="navigateTo(tile.id)" class="imgContainer">
+                <img [src]="tile.img" alt="{{tile.name}}" layout-fill>
+                <mat-grid-tile-footer>{{tile.name}}</mat-grid-tile-footer>
+            </div>
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>
