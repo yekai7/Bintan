@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { DbService } from './../services/db.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -6,24 +7,48 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.css']
 })
+
 export class MainComponent implements OnInit {
 
-  constructor(private dbSvc: DbService) { }
+  constructor(private dbSvc: DbService, private router: Router) { }
+
+  tiles = [];
 
   ngOnInit() {
+    this.getData();
   }
-  activities = this.dbSvc.activitiesList;
-  randomAct;
-  //not working, intending to integrate with db first
-  processSearch(value){
-    if(value.length == 0) {
-      return this.activities = [];
+
+  getData(){
+    let actList = this.dbSvc.activitiesList;
+    for (let i = actList.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = actList[i]
+      actList[i] = actList[j]
+      actList[j] = temp
     }
-    this.activities = this.dbSvc.activitiesList;
+
+    for (let a = 0; a < actList.length; a++) {
+      let obj = {
+        img: actList[a].img,
+        name: actList[a].name,
+        id: actList[a].id,
+        cols: 1,
+        rows: 1
+      }
+      if (a == 0 || a == 7 ) {
+        obj.cols = 2;
+        obj.rows = 2;
+      }
+      if (a == 9) {
+        break;
+      }
+      this.tiles.push(obj)
+    }
   }
-  
-  getRandomAct(){
-    const ranNum = Math.floor(Math.random() * this.activities.length) +1
-    this.randomAct = this.activities[ranNum];
+ 
+
+  navigateTo(id) {
+    this.router.navigate(['activity', id])
   }
+
 }
