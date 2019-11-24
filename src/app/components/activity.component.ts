@@ -11,11 +11,10 @@ export class ActivityComponent implements OnInit {
 
   constructor(private aRoute : ActivatedRoute, private dbSvc: DbService) { }
 
-  activity;
+  activity =[];
   ngOnInit() {
     this.dbSvc.getActivity(this.aRoute.snapshot.params.id).then(result=>{
       this.activity = result
-      console.log(result)
     }).catch(err=>{
       console.log(err);
     });

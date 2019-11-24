@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { Component } from '@angular/core';
 import { fadeAnimation } from './animation';
+import { DbService } from './services/db.service';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +11,14 @@ import { fadeAnimation } from './animation';
 })
 export class AppComponent {
   title = 'Bintan';
-  constructor(private router: Router){}
+  category = [];
+  constructor(private router: Router, private dbSvc: DbService){}
+
+  ngOnInit() {
+    this.dbSvc.getCategory().then(result=>{
+      this.category = result;
+    })
+  }
 
   navigate(dest = "/"){
     this.router.navigate([dest]);

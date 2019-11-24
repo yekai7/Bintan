@@ -1,6 +1,7 @@
 import { Router } from '@angular/router';
 import { DbService } from './../services/db.service';
 import { Component, OnInit } from '@angular/core';
+import { Activity } from '../model';
 
 @Component({
   selector: 'app-main',
@@ -14,24 +15,17 @@ export class MainComponent implements OnInit {
 
   tiles = [];
   actList;
+  searchResult:Activity[] = [];
+
   ngOnInit() {
     this.dbSvc.loadActivities().then(result => {
       this.actList = result;
-      console.log('Result', result);
-      console.log("act list", this.actList)
-      this.getData();
-      console.log("Tiles is", this.tiles)
+      this.randomOrder();
+      this.setLayout();
     })
   }
 
-  getData() {
-    for (let i = this.actList.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * i)
-      const temp = this.actList[i]
-      this.actList[i] = this.actList[j]
-      this.actList[j] = temp
-    }
-
+  setLayout() {
     for (let a = 0; a < this.actList.length; a++) {
       let obj = {
         img: this.actList[a].image_url,
@@ -51,6 +45,22 @@ export class MainComponent implements OnInit {
     }
   }
 
+  randomOrder(){
+    for (let i = this.actList.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i)
+      const temp = this.actList[i]
+      this.actList[i] = this.actList[j]
+      this.actList[j] = temp
+    }
+  }
+
+  search(value){
+    if (value == '')
+      this.searchResult = [];
+    this.dbSvc.searchActivity(value).then(result=>{
+      this.searchResult = result
+    })
+  }
 
   navigateTo(id) {
     this.router.navigate(['activity', id])

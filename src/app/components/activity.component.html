@@ -1,36 +1,45 @@
-<div class="detailContainer" fxLayoutAlign="start center" fxLayout="column row" fxLayoutGap="2vh">
+<div class="detailContainer" fxLayoutAlign="start center" fxLayout="column row" fxLayoutGap="2vh"
+    *ngIf='activity.length > 0'>
     <img src={{activity[0].image_url}} class="actImg">
     <div class="content" fxLayout="column row" fxLayoutAlign="space-around center" fxLayoutGap="5vh">
-        <h1>{{activity.name}}</h1>
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        Cost
-                    </td>
-                    <td>
-                        {{activity[0].cost}}
-                    </td>
-                </tr>
+        <h2>{{activity[0].name.toUpperCase()}}</h2>
+        <table>
+            <tr>
+                <td>
+                    COST
+                </td>
+                <td>
+                    {{activity[0].cost}}
+                </td>
+            </tr><br>
 
-                <tr>
-                    <td>
-                        Location
-                    </td>
-                    <td>
-                        {{activity[0].location}}
-                    </td>
-                </tr>
+            <tr>
+                <td>
+                    LOCATION
+                </td>
+                <td>
+                    {{activity[0].location}}
+                </td>
+            </tr><br>
 
-                <tr>
-                    <td>
-                        Details
-                    </td>
-                    <td>
-                        <a href="{{activity[0].url}}">Visit their site!</a>
-                    </td>
-                </tr>
-            </table>
-        </div>
+            <tr *ngIf='activity[0].remarks'>
+                <td>
+                    REMARKS
+                </td>
+                <td>
+                    {{activity[0].remarks}}
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    WEBSITE
+                </td>
+                <td>
+                    <a href="{{activity[0].url}}" *ngIf='activity[0].url.length >0'>Click here!</a>
+                </td>
+            </tr>
+        </table>
+
     </div>
 </div>

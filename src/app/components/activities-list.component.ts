@@ -9,22 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ActivitiesListComponent implements OnInit {
 
-  constructor(private router: Router, private dbSvc: DbService, private route: ActivatedRoute) { }
+  constructor(private router: Router, private dbSvc: DbService) { }
 
   actList;
 
   ngOnInit() {
-    this.dbSvc.loadCategory('fun').then(result => {
+    this.dbSvc.loadCategory(this.router.url).then(result => {
       this.actList = result;
-      console.log(this.actList);
     });
   }
 
-  goLeft() {
-    this.router.navigate(['chill', { relativeTo: this.route }])
-  }
-
-  goTo(id) {
+  goTo(id){
     this.router.navigate(['activity', id])
   }
 

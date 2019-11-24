@@ -1,10 +1,31 @@
-<div class="mainContainer">
-    <mat-grid-list cols="3" rowHeight="20vh">
-        <mat-grid-tile *ngFor="let tile of tiles;let i = index" [colspan]="tile.cols" [rowspan]="tile.rows">
-            <div (click)="navigateTo(tile._id)" class="imgContainer">
-                <img [src]="tile.img" alt="{{tile.name}}" layout-fill>
-                <mat-grid-tile-footer>{{tile.name}}</mat-grid-tile-footer>
-            </div>
-        </mat-grid-tile>
-    </mat-grid-list>
+<mat-toolbar color="warn">
+    <mat-form-field class='searchBar'>
+        <input matInput type='text' name='searchItem' (keyup)='search($event?.target?.value)'>
+    </mat-form-field>
+    <mat-icon color="primary">search</mat-icon>
+</mat-toolbar>
+<div>
+    <div *ngIf='searchResult.length >= 0' class='searchContainer'>
+        <table>
+            <tr *ngFor='let result of searchResult'>
+                <td>
+                    <img src={{result.image_url}} class='previewImg'>
+                </td>
+                <td (click)='navigateTo(result._id)'>
+                    <p>{{result.name}}</p>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="mainContainer">
+        <mat-grid-list cols="3" rowHeight="20vh">
+            <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
+                <div (click)="navigateTo(tile.id)" class="imgContainer">
+                    <img [src]="tile.img" alt="{{tile.name}}" layout-fill>
+                    <mat-grid-tile-footer>{{tile.name}}</mat-grid-tile-footer>
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
 </div>

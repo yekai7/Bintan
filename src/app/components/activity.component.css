@@ -5,9 +5,8 @@
 }
 
 .detailContainer {
-    height:100vh;
+    height:95vh;
     font-family: Montserrat,sans-serif;
-    background-color: white;
 }
 
 .data{
@@ -17,11 +16,12 @@
 }
 
 .content {
-    /* background-color: aliceblue; */
-    width:80vw;
-    height:40vh;
+    width:90vw;
+    height:auto;
     border:2px solid black;
     border-radius: 5px;
+    background-color: white;
+    padding: 15px;;
 }
 
 td:nth-child(2) {

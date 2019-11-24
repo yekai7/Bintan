@@ -32,3 +32,17 @@
 .mainContainer{
     background-color: white;
 }
+
+
+.searchContainer{
+    background-color: white;
+    border-bottom-color: black;
+}
+
+.previewImg{
+    height: 8vh
+}
+
+.searchBar{
+    width:90vw
+}
