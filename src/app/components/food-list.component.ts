@@ -10,9 +10,13 @@ import { DbService } from '../services/db.service';
 export class FoodListComponent implements OnInit {
 
   constructor(private router: Router, private dbSvc:DbService) { }
-  foodList = this.dbSvc.getActFromCategory('food');
+  foodList;
 
   ngOnInit() {
+    this.dbSvc.loadCategory('food').then(result=>{
+      this.foodList = result;
+      console.log(this.foodList);
+    });
   }
   goRight(){
     this.router.navigate(['chill']);

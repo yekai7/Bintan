@@ -1,5 +1,5 @@
 <div class="detailContainer" fxLayoutAlign="start center" fxLayout="column row" fxLayoutGap="2vh">
-    <img src={{activity.img}} class="actImg">
+    <img src={{activity[0].image_url}} class="actImg">
     <div class="content" fxLayout="column row" fxLayoutAlign="space-around center" fxLayoutGap="5vh">
         <h1>{{activity.name}}</h1>
         <div>
@@ -9,7 +9,7 @@
                         Cost
                     </td>
                     <td>
-                        {{activity.cost}}
+                        {{activity[0].cost}}
                     </td>
                 </tr>
 
@@ -18,7 +18,7 @@
                         Location
                     </td>
                     <td>
-                        {{activity.location}}
+                        {{activity[0].location}}
                     </td>
                 </tr>
 
@@ -27,14 +27,10 @@
                         Details
                     </td>
                     <td>
-                        <a href="{{activity.url}}">Visit their site!</a>
-
+                        <a href="{{activity[0].url}}">Visit their site!</a>
                     </td>
                 </tr>
             </table>
-            <!-- <p>Cost - {{activity.cost}}</p>
-            <p>Location - {{activity.location}}</p>
-            <a href="{{activity.url}}">Visit their site!</a> -->
         </div>
     </div>
 </div>

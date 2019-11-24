@@ -13,29 +13,34 @@ export class MainComponent implements OnInit {
   constructor(private dbSvc: DbService, private router: Router) { }
 
   tiles = [];
-
+  actList;
   ngOnInit() {
-    this.getData();
+    this.dbSvc.loadActivities().then(result => {
+      this.actList = result;
+      console.log('Result', result);
+      console.log("act list", this.actList)
+      this.getData();
+      console.log("Tiles is", this.tiles)
+    })
   }
 
-  getData(){
-    let actList = this.dbSvc.activitiesList;
-    for (let i = actList.length - 1; i > 0; i--) {
+  getData() {
+    for (let i = this.actList.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * i)
-      const temp = actList[i]
-      actList[i] = actList[j]
-      actList[j] = temp
+      const temp = this.actList[i]
+      this.actList[i] = this.actList[j]
+      this.actList[j] = temp
     }
 
-    for (let a = 0; a < actList.length; a++) {
+    for (let a = 0; a < this.actList.length; a++) {
       let obj = {
-        img: actList[a].img,
-        name: actList[a].name,
-        id: actList[a].id,
+        img: this.actList[a].image_url,
+        name: this.actList[a].name,
+        id: this.actList[a]._id,
         cols: 1,
         rows: 1
       }
-      if (a == 0 || a == 7 ) {
+      if (a == 0 || a == 7) {
         obj.cols = 2;
         obj.rows = 2;
       }
@@ -45,7 +50,7 @@ export class MainComponent implements OnInit {
       this.tiles.push(obj)
     }
   }
- 
+
 
   navigateTo(id) {
     this.router.navigate(['activity', id])

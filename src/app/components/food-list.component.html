@@ -1,9 +1,9 @@
 <!-- <div (swipeleft)="goRight()" class="container"> -->
 <div>
-    <div *ngFor="let food of foodList" fxLayoutAlign="space-around " (click)="goTo(food.id)">
+    <div *ngFor="let food of foodList" fxLayoutAlign="space-around " (click)="goTo(food._id)">
         <mat-card class="customCard">
             <mat-card-content>
-                <img src="{{food.img}}" class="actImg">
+                <img src="{{food.image_url}}" class="actImg">
             </mat-card-content>
             <mat-card-content>
                 <h2>{{food.name}}</h2>

@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -27,7 +28,8 @@ import { ActivityComponent } from './components/activity.component';
     MaterialModule,
     FlexLayoutModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    HttpClientModule
   ],
   providers: [DbService],
   bootstrap: [AppComponent]

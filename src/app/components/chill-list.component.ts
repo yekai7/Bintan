@@ -11,8 +11,13 @@ export class ChillListComponent implements OnInit {
 
   constructor(private router: Router, private dbSvc: DbService) { }
 
-  chillList = this.dbSvc.getActFromCategory('chill');
+  chillList;
+
   ngOnInit() {
+    this.dbSvc.loadCategory('chill').then(result=>{
+      this.chillList = result;
+      console.log(this.chillList);
+    });
   }
 
   // goRight(){

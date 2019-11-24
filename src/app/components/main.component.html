@@ -1,26 +1,7 @@
-<!-- <mat-toolbar fxLayoutAlign="space-around center" color="warn">
-    <p class="menuItem" (click)="getRandomAct()">Random</p>
-    <mat-form-field>
-        <input matInput type="text" name="search" #search (keyup)="processSearch($event?.target?.value)">
-    </mat-form-field>
-    <mat-icon>search</mat-icon>
-</mat-toolbar>
-<div *ngIf="!randomAct.length">
-    <mat-card class="customCard">
-        <mat-card-content>
-            <img src="{{randomAct.img}}" class="actImg">
-        </mat-card-content>
-        <mat-card-content>
-            <h2>{{randomAct.name}}</h2>
-            <p>Where: {{randomAct.location}}</p>
-        </mat-card-content>
-    </mat-card>
-</div> -->
-
 <div class="mainContainer">
     <mat-grid-list cols="3" rowHeight="20vh">
         <mat-grid-tile *ngFor="let tile of tiles;let i = index" [colspan]="tile.cols" [rowspan]="tile.rows">
-            <div (click)="navigateTo(tile.id)" class="imgContainer">
+            <div (click)="navigateTo(tile._id)" class="imgContainer">
                 <img [src]="tile.img" alt="{{tile.name}}" layout-fill>
                 <mat-grid-tile-footer>{{tile.name}}</mat-grid-tile-footer>
             </div>
