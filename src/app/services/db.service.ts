@@ -22,7 +22,7 @@ export class DbService {
   //   { id: 20, name: 'Banana boat', cost: 20, location: 'Marine Centre, beside the Cassia Bintan infinity pool', img: 'assets/bananaboat.jpg', category:"fun"}
   // ]
 
-  url = process.env.WEB || 'https://bintan-server.herokuapp.com';
+  url = 'https://bintan-server.herokuapp.com';
   loadActivities(): Promise<any> {
     return this.http.get(`${this.url}/api/activities`).toPromise();
   }
