@@ -16,14 +16,10 @@
 }
 
 .content {
-    width:90vw;
+    width:85vw;
     height:auto;
-    border:2px solid black;
-    border-radius: 5px;
-    background-color: white;
-    padding: 15px;;
 }
 
 td:nth-child(2) {
-    text-align: center;
+    text-align: right;
 }

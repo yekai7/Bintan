@@ -1,7 +1,7 @@
 <div class="detailContainer" fxLayoutAlign="start center" fxLayout="column row" fxLayoutGap="2vh"
     *ngIf='activity.length > 0'>
     <img src={{activity[0].image_url}} class="actImg">
-    <div class="content" fxLayout="column row" fxLayoutAlign="space-around center" fxLayoutGap="5vh">
+    <!-- <div class="content" fxLayout="column" fxLayoutAlign="space-between" fxLayoutGap="5vh">
         <h2>{{activity[0].name.toUpperCase()}}</h2>
         <table>
             <tr>
@@ -11,7 +11,7 @@
                 <td>
                     {{activity[0].cost}}
                 </td>
-            </tr><br>
+            </tr>
 
             <tr>
                 <td>
@@ -41,5 +41,27 @@
             </tr>
         </table>
 
-    </div>
+    </div> -->
+    <mat-card class='content'>
+        <mat-card-header>
+            <mat-card-title><b>{{activity[0].name.toUpperCase()}}</b></mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <span><b>LOCATION</b></span>
+            <p>{{activity[0].location}}</p>
+            <hr>
+            <p><b>COST</b></p>
+            <p>${{activity[0].cost}}</p>
+
+            <div *ngIf='activity[0].remarks'>
+                <hr>
+                <p><b>REMARKS</b></p>
+                <p>{{activity[0].remarks}}</p>
+            </div>
+
+            <div *ngIf='activity[0].url.length >0' fxLayoutAlign='space-around'>
+                <b><a href="{{activity[0].url}}">{{activity[0].name}} official site</a></b>
+            </div>
+        </mat-card-content>
+    </mat-card>
 </div>
