@@ -13,7 +13,7 @@
                 </td>
                 <td (click)='navigateTo(result._id)'>
                     <p>{{result.name}}</p>
-                    <p>{{result.location}}</p>
+                    <p fxLayoutAlign='start center'><mat-icon>directions_car</mat-icon>{{result.location}}</p>
                 </td>
             </tr>
         </table>
