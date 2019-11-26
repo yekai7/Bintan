@@ -40,7 +40,8 @@
 }
 
 .previewImg{
-    height: 8vh
+    height: 8vh;
+    width: 30vw;
 }
 
 .searchBar{
