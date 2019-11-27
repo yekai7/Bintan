@@ -19,7 +19,7 @@
         </table>
     </div>
 
-    <div class="mainContainer">
+    <div class="mainContainer" *ngIf='tiles.length > 0'>
         <mat-grid-list cols="3" rowHeight="20vh">
             <mat-grid-tile *ngFor="let tile of tiles" [colspan]="tile.cols" [rowspan]="tile.rows">
                 <div (click)="navigateTo(tile.id)" class="imgContainer">
